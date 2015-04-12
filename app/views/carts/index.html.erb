@@ -1,1 +1,9 @@
-<h1>This Is TidBytes Cart Aggregator</h1>
+<%= @carts.each do |cart| %>
+	<div>
+		<h1><%= cart.name %></h1></br />
+		<i><%= cart.address %></i><br />
+		<p><%= cart.description %></p></br />
+	</div>
+
+	<hr />
+<% end %>

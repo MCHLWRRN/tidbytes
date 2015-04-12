@@ -1,0 +1,11 @@
+Cart.create(:name => 'Azul Tequila Mexican Taqueria', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Great Mexican food')
+
+Cart.create(:name => 'Garden Monsters', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Paleo heaven!')
+
+Cart.create(:name => 'Saffron Indian Kitchen', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Excellent Indian curries')
+
+Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
