@@ -9,3 +9,43 @@ Portland, OR 97202', :description => 'Excellent Indian curries')
 
 Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
 Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+
+Cart.create(:name => 'E-San', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Quality thai!')
+
+Cart.create(:name => 'Ingrids Scandanavian Food, :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Try the roasted potatos with horesradish sauce.')
+
+Cart.create(:name => 'Love Belizean', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Hapa PDX', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Buki', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Pyro Pizza', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Pyros Wicked Wiches', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Smaaken', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
+
+Cart.create(:name => 'Namu', :address=> 'SE 28th Place and Division Street,
+Portland, OR 97202', :description => 'Hawaiian-Korean fusion')
