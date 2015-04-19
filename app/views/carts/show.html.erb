@@ -5,5 +5,6 @@
 	<p><%= @cart.description %></p>
 	<div class="pull-right">
 		<%= link_to 'Edit', edit_cart_path(@cart), :class => 'btn btn-primary' %>
+		<%= link_to 'Destroy', cart_path(@cart), :method => :delete, Ldata =. {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger' %>
 	</div>
 </div>
