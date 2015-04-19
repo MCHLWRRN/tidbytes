@@ -3,6 +3,10 @@
 		<h1><%= cart.name %></h1>
 		<i><%= cart.address %></i><br /><br />
 		<p><%= cart.description %></p><br />
+
+		<% if cart.user.present? %>
+			 <small><%= cart.user.email %></small>
+		<% end %>
 	</div>
 
 <% end %>

@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+	before_action :authenticate_user!, :only => [:new, :create]
 	def index
 		@carts = Cart.all
 	end
@@ -8,7 +9,7 @@ class CartsController < ApplicationController
 	end
 
 	def create
-		Cart.create(cart_params)
+		current_user.carts.create(cart_params)
 		redirect_to root_path
 	end
 
