@@ -21,6 +21,12 @@ class CartsController < ApplicationController
 		@cart = Cart.find(params[:id])
 	end
 
+	def update
+		@cart = Cart.find(params[:id])
+		@cart.update_attributes(cart_params)
+		redirect_to root_path
+	end
+
 	private
 
 	def cart_params
