@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-	before_action :authenticate_user!, :only => [:new, :create]
+	before_action :authenticate_user!, :only => [:new, :create, :edit, :update]
 	def index
 		@carts = Cart.all
 	end
@@ -19,10 +19,17 @@ class CartsController < ApplicationController
 
 	def edit
 		@cart = Cart.find(params[:id])
+
+		if @cart.user !+ current_user
+			return render :text => 'Not Allowed', :status => :forbidden
+		end
 	end
 
 	def update
 		@cart = Cart.find(params[:id])
+		if @cart.user != current_user
+			return render :text => 'Not Allowed', :status => :forbidden
+		end
 		@cart.update_attributes(cart_params)
 		redirect_to root_path
 	end
