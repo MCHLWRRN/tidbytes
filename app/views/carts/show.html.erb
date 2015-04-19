@@ -3,4 +3,7 @@
 	<i><%= @cart.address %></i>
 	<br/><br/>
 	<p><%= @cart.description %></p>
+	<div class="pull-right">
+		<%= link_to 'Edit', edit_cart_path(@cart), :class => 'btn btn-primary' %>
+	</div>
 </div>
