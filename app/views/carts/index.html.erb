@@ -1,6 +1,6 @@
 <% @carts.each do |cart| %>
 	<div class="pod col-xs-10 col-xs-offset-1">
-		<h1><%= cart.name %></h1>
+		<h1><%= link_to cart.name, cart_path(cart) %></h1>
 		<i><%= cart.address %></i><br /><br />
 		<p><%= cart.description %></p><br />
 

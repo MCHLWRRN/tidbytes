@@ -13,6 +13,10 @@ class CartsController < ApplicationController
 		redirect_to root_path
 	end
 
+	def show
+		@cart = Cart.find(params[:id])
+	end
+
 	private
 
 	def cart_params
