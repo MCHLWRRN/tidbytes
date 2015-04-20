@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-	before_action :authenticate_user!, :only => [:new, :create, :edit, :update]
+	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 	def index
 		@carts = Cart.all
 	end
@@ -36,6 +36,9 @@ class CartsController < ApplicationController
 
 	def destroy
 		@cart = Cart.find(params[:id])
+		if @cart.user != current_user
+			return render :text => 'Not Allowed', :status => :forbidden
+		end
 		@cart.destroy
 		redirect_to root_path
 	end
