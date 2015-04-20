@@ -9,8 +9,12 @@ class CartsController < ApplicationController
 	end
 
 	def create
-		current_user.carts.create(cart_params)
-		redirect_to root_path
+		@cart = current_user.carts.create(cart_params)
+		if @cart.valid?
+			redirect_to root_path
+		else
+			render :new, :status => :unprocessable_entity
+		end
 	end
 
 	def show
@@ -31,7 +35,11 @@ class CartsController < ApplicationController
 			return render :text => 'Not Allowed', :status => :forbidden
 		end
 		@cart.update_attributes(cart_params)
-		redirect_to root_path
+		if @cart.valid?
+			redirect_to root_path
+		else
+			render :edit, :status => :unprocessable_entity
+		end
 	end
 
 	def destroy
