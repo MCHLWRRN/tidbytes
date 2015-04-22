@@ -19,6 +19,7 @@ class CartsController < ApplicationController
 
 	def show
 		@cart = Cart.find(params[:id])
+		@comment = Comment.new
 	end
 
 	def edit
