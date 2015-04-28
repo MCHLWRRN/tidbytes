@@ -13,11 +13,32 @@
 
 <div class="clear"></div>
 
-<%= simple_form_for @comment, :url => cart_comments_path(@cart) do |f| %>
-  <%= f.input :message %>
-  <%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
-  <%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
-<% end %>
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Add A Comment
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add A Comment</h4>
+      </div>
+      <%= simple_form_for @comment, :url => cart_comments_path(@cart) do |f| %>
+      <div class="modal-body">
+     	  <%= f.input :message %>
+			  <%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <h1>Comments</h1>
 
